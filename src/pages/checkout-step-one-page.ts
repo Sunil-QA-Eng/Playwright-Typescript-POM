@@ -1,6 +1,7 @@
 import { BasePage } from './base-page';
 
 export class CheckoutStepOnePage extends BasePage {
+    
     firstNameField = this.page.locator('//input[@id="first-name"]');
     lastNameField = this.page.locator('//input[@id="last-name"]');
     postalCodeField = this.page.locator('//input[@id="postal-code"]');
@@ -10,6 +11,9 @@ export class CheckoutStepOnePage extends BasePage {
         await this.firstNameField.fill(firstName);
         await this.lastNameField.fill(lastName);
         await this.postalCodeField.fill(postalCode);
+    }
+
+    async clickOnContinueButton() {
         await this.continueButton.click();
     }
 }

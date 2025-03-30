@@ -6,7 +6,7 @@ export class InventoryPage extends BasePage {
     cartIcon = this.page.locator('//a[@class="shopping_cart_link"]');
     swagLabsLogo = this.page.locator('//div[@class="app_logo"]');
 
-    async addItemToCart() {
+    async addBackPackToCart() {
         await this.addToCart.click();
         await this.cartIcon.click();
     }
